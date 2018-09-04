@@ -1,0 +1,58 @@
+{
+  "name": "walle",
+  "version": "0.0.1",
+  "description": "a node server with typescript",
+  "main": "index.js",
+  "author": "波比小金刚",
+  "keywords": [
+    "koa2",
+    "typescript",
+    "rest",
+    "api",
+    "decorator"
+  ],
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "build": "rm -rf ./build && npm run lint && tsc",
+    "build:watch": "rm -rf dist && npm run lint && tsc -w",
+    "start": "node ./dist/app.js",
+    "start:dev": "export NODE_ENV=development; nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node ./src/app.ts",
+    "lint": "tslint --project ./tsconfig.json --fix 'src/**/*.ts' 'test/**/*.ts' --format codeFrame"
+  },
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "kcors": "^2.2.2",
+    "koa": "^2.5.2",
+    "koa-better-body": "^3.0.4",
+    "koa-compress": "^3.0.0",
+    "koa-helmet": "^4.0.0",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.2.9",
+    "pino": "^5.4.1",
+    "pino-pretty": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/kcors": "^2.2.3",
+    "@types/koa": "^2.0.46",
+    "@types/koa-compress": "^2.0.8",
+    "@types/koa-helmet": "^3.1.2",
+    "@types/koa-router": "^7.0.31",
+    "@types/mongoose": "^5.2.6",
+    "@types/node": "^10.9.4",
+    "@types/pino": "^5.20.0",
+    "@types/supertest": "^2.0.5",
+    "apidoc": "^0.17.6",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.3",
+    "should": "^13.2.3",
+    "supertest": "^3.1.0",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "tslint-config-standard-plus": "^2.0.1",
+    "typescript": "^3.0.1"
+  }
+}
