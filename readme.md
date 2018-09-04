@@ -1,6 +1,6 @@
 # walle
 
-> 波比小金刚
+> 波比小金刚、garry
 
 # techs record
 
