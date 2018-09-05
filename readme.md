@@ -5,3 +5,7 @@
 # techs record
 
 * logger: [pino](http://getpino.io/#/docs/web?id=koa)
+
+# todos
+[  ] - mongodb support
+[  ] - mysql support
