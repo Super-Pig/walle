@@ -6,6 +6,14 @@
 
 * logger: [pino](http://getpino.io/#/docs/web?id=koa)
 
+# release
+
+- 2018-09-09 🚀 v-0.1.0
+
+# contribution
+
+please don't marry your thoughts or star, of course PR is the best! skr~ 🔥🔥
+
 # todos
 
 1. db

@@ -31,6 +31,10 @@ app.use(middlewares.errorHandler(logger))
 // globale error
 app.on('error', (err: any, ctx: Koa.Context) => {
   logger.error(`walle server error!`, err)
+  ctx.status = 500
+  ctx.body = {
+    msg: 'unkown error!'
+  }
 })
 
 // listener
