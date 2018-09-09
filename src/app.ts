@@ -19,6 +19,12 @@ app.use(helmet())
 // cors
 app.use(Kcors())
 
+// response logger in x-response-time
+app.use(middlewares.logResponse())
+
+// request logger
+app.use(middlewares.logRequest(logger))
+
 // error handler
 app.use(middlewares.errorHandler(logger))
 

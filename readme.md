@@ -36,3 +36,5 @@
 - [ ] ssr
 - [x] logger
 - [x] exception handler
+- [x] request logger
+- [x] response logger
