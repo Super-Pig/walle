@@ -27,6 +27,7 @@ please don't marry your thoughts or star, of course PR is the best! skr~ ðŸ”¥ðŸ”
 - [ ] validator(joi or other)
 - [ ] graphQL support
 - [ ] restful support(like java spring?)
+- [ ] swagger | apidocs support
 
 3. ci/cd
 
