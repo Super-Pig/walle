@@ -15,9 +15,9 @@
     "node": ">=8.0.0"
   },
   "scripts": {
-    "build": "rm -rf ./build && npm run lint && tsc",
-    "build:watch": "rm -rf dist && npm run lint && tsc -w",
-    "start": "node ./dist/app.js",
+    "build": "rm -rf ./dist && npm run lint && tsc",
+    "build:watch": "rm -rf ./dist && npm run lint && tsc -w",
+    "start": "npm run build && node ./dist/src/app.js",
     "start:dev": "export NODE_ENV=development; nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node ./src/app.ts",
     "lint": "tslint --project ./tsconfig.json --fix 'src/**/*.ts' 'test/**/*.ts' --format codeFrame"
   },

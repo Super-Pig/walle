@@ -10,22 +10,27 @@
     "removeComments": true,
     "pretty": true,
     "strict": true,
+    "declaration": true,
     "moduleResolution": "node",
-    "outDir": "dist",
-    "rootDir": "src",
-    "baseUrl": "./",
-    "typeRoots": [
-      "node_modules/@types"
+    "rootDir": ".",
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": {
+      "@lib/*": ["src/lib/*"]
+    },
+    "lib": [
+      "es6", "es7", "dom"
     ]
   },
   "include": [
-    "src",
-    "test"
+    "./src/**/*.ts",
+    "./typings"
   ],
   "exclude": [
     "node_modules",
-    "dist",
-    "logs"
+    "logs",
+    "test",
+    "dist"
   ],
   "compileOnSave": false,
   "atom": {

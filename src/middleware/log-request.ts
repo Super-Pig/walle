@@ -1,5 +1,5 @@
 import { Context } from 'koa'
-import { Logger } from 'pino' 
+import { Logger } from 'pino'
 
 export const logRequest = (logger: Logger) => async (ctx: Context, next: () => Promise<any>) => {
   const start = Date.now()
@@ -14,9 +14,9 @@ export const logRequest = (logger: Logger) => async (ctx: Context, next: () => P
     timeMs: Date.now() - start
   }
 
-  if(ctx.status >= 400){
+  if (ctx.status >= 400) {
     logger.error(message, logData, ctx.body)
-  }else{
+  } else {
     logger.info(message, logData)
   }
 }
