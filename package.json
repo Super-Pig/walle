@@ -21,7 +21,7 @@
     "start:dev": "export NODE_ENV=development; nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node ./src/app.ts",
     "lint": "tslint --project ./tsconfig.json --fix 'src/**/*.ts' 'test/**/*.ts' --format codeFrame"
   },
-  "license": "ISC",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "kcors": "^2.2.2",
