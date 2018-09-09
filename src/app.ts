@@ -30,7 +30,7 @@ app.use(middlewares.errorHandler(logger))
 
 // globale error
 app.on('error', (err: any, ctx: Koa.Context) => {
-  console.warn(err)
+  logger.error(`walle server error!`, err)
 })
 
 // listener
