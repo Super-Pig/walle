@@ -16,9 +16,7 @@
   },
   "scripts": {
     "build": "rm -rf ./dist && npm run lint && tsc",
-    "build:watch": "rm -rf ./dist && npm run lint && tsc -w",
-    "start": "npm run build && node ./dist/src/app.js",
-    "start:dev": "export NODE_ENV=development; npm run build && nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node ./src/app.ts",
+    "start": "npm run build && nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node -r tsconfig-paths/register ./src/app.ts",
     "lint": "tslint --project ./tsconfig.json --fix 'src/**/*.ts' 'test/**/*.ts' --format codeFrame"
   },
   "license": "MIT",
@@ -51,6 +49,7 @@
     "should": "^13.2.3",
     "supertest": "^3.1.0",
     "ts-node": "^7.0.1",
+    "tsconfig-paths": "^3.5.0",
     "tslint": "^5.11.0",
     "tslint-config-standard-plus": "^2.0.1",
     "typescript": "^3.0.1"

@@ -1,6 +1,6 @@
 import { Logger } from 'pino'
 import { Context } from 'koa'
-import { HttpError, ServiceError } from '../lib/error'
+import { HttpError, ServiceError } from '@lib/error'
 
 interface IHttpStatusMap {
   [key: number]: number
